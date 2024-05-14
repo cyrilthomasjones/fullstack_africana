@@ -69,7 +69,7 @@ jobs:
         run: |
             echo "Dockerrun.aws.json before updating tag"
             cat Dockerrun.aws.json
-            sed -i -E 's_(cyrijthomas2005/cyrilsoft-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' ../Dockerrun.aws.json
+            sed -i -E 's_(cyrijthomas2005/cyrilsoft-api:)([^"]*)_\1'${{steps.build-number.outputs.BUILD_NUMBER}}'_' Dockerrun.aws.json
             echo "Dockerrun.aws.json after updating tag"
             cat Dockerrun.aws.json
       # Now let's write the configuration necessary for taking the Dockerrun.aws.json to
