@@ -34,7 +34,6 @@ public class Main {
 
 //    printBeans(applicationContext);
 
-
     }
 
   @Bean
@@ -42,6 +41,7 @@ public class Main {
        return new Foo("bar");
     }
     record Foo(String name){
+
     }
 
     @Bean
