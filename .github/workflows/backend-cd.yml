@@ -84,7 +84,8 @@ jobs:
             version_label: ${{ steps.build-number.outputs.BUILD_NUMBER }}
             version_description: ${{ github.SHA }}
             region: ${{ secrets.EB_REGION }}
-            deployment_package: backend/Dockerrun.aws.json
+            deployment_package: Dockerrun.aws.json
+
       # Here we want to commit the changes we made in step 8 to our repo, using GitHub action.
       - name: Commit and push Dockerrun.aws.json
         run: |
