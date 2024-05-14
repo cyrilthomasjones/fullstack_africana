@@ -41,14 +41,12 @@ public class Main {
        return new Foo("bar");
     }
     record Foo(String name){
-
     }
 
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
 
         return args -> {
-
             var faker = new Faker();
             Random random = new Random();
             Name name = faker.name();
