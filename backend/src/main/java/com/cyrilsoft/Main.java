@@ -47,13 +47,11 @@ public class Main {
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
         return args -> {
-
             var faker = new Faker();
             Random random = new Random();
             Name name = faker.name();
             String firstName = name.firstName();
             String lastName = name.lastName();
-
             Customer customer = new Customer(
                     firstName + " "+ lastName,
 //                    faker.internet().safeEmailAddress(),
