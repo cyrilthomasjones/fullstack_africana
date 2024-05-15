@@ -13,7 +13,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 //import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -48,10 +47,10 @@ public class Main {
     CommandLineRunner runner(CustomerRepository customerRepository){
         return args -> {
             var faker = new Faker();
-
             Random random = new Random();
             Name name = faker.name();
             String firstName = name.firstName();
+
             String lastName = name.lastName();
             Customer customer = new Customer(
                     firstName + " "+ lastName,
@@ -64,6 +63,8 @@ public class Main {
 //          List<Customer> customers = List.of(alex, jamila);
 //          customerRepository.saveAll(customers);
             customerRepository.save(customer);
+
+
         };
     }
 
