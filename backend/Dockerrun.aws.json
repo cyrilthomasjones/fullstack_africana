@@ -2,8 +2,8 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "cyrilsoft-api",
-      "image": "cyrijthomas2005/cyrilsoft-api:latest",
+      "name": "fullstack_africana",
+      "image": "cyrijthomas2005/fullstack_africana:latest",
       "essential": true,
       "memory": 512,
       "portMappings": [
