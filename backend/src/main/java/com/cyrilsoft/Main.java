@@ -16,8 +16,12 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Random;
 
 @SpringBootApplication // All three below can be
+
 //@ComponentScan(basePackages = "com.cyril")
 //@EnableAutoConfiguration
+
+
+
 //@Configuration
 
 public class Main {
