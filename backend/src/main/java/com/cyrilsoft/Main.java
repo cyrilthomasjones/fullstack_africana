@@ -13,7 +13,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 //import org.springframework.web.bind.annotation.*;
 
-import java.util.Objects;
 import java.util.Random;
 
 @SpringBootApplication // All three below can be
@@ -63,8 +62,6 @@ public class Main {
 //          List<Customer> customers = List.of(alex, jamila);
 //          customerRepository.saveAll(customers);
             customerRepository.save(customer);
-
-
         };
     }
 
