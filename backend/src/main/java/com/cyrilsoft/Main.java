@@ -19,13 +19,9 @@ import java.util.Random;
 
 //@ComponentScan(basePackages = "com.cyril")
 //@EnableAutoConfiguration
-
-
-
 //@Configuration
 
 public class Main {
-
     public static void main(String[] args) {
 //        SpringApplication.run(Main.class, args);
 

@@ -14,9 +14,12 @@ services:
       - postgres
     restart: unless-stopped
 
-  cyrilsoft-api:
-    container_name: cyrilsoft-api
-    image: cyrijthomas2005/cyrilsoft-api
+#  cyrilsoft-api
+  fullstack_africana:
+#   container_name: cyrilsoft-api
+    container_name: fullstack_africana
+#   image: cyrijthomas2005/cyrilsoft-api
+    image: cyrijthomas2005/fullstack_africana
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
     ports:
