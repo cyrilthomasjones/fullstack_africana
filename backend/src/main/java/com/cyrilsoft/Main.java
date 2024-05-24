@@ -9,8 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 
 import java.util.Random;
@@ -29,7 +27,6 @@ public class Main {
 
     ConfigurableApplicationContext applicationContext =
             SpringApplication.run(Main.class, args);
-
 //    printBeans(applicationContext);
 
     }
@@ -39,8 +36,6 @@ public class Main {
        return new Foo("bar");
     }
     record Foo(String name){
-
-
 
     }
 

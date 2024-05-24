@@ -1,9 +1,7 @@
 package com.cyrilsoft.customer;
 
-import com.cyrilsoft.Main;
 import jakarta.persistence.*;
 
-import java.math.BigInteger;
 import java.util.Objects;
 
 @Entity
