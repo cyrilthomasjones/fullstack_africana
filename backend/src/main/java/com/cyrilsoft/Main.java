@@ -40,6 +40,8 @@ public class Main {
     }
     record Foo(String name){
 
+
+
     }
 
     @Bean
