@@ -59,6 +59,8 @@ public class Main {
 //          customerRepository.saveAll(customers);
 
             customerRepository.save(customer);
+
+
         };
     }
 
