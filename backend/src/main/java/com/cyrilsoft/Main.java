@@ -58,6 +58,8 @@ public class Main {
 //          List<Customer> customers = List.of(alex, jamila);
 //          customerRepository.saveAll(customers);
 
+
+
             customerRepository.save(customer);
         };
     }
