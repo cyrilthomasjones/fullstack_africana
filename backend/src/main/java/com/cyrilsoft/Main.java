@@ -52,6 +52,7 @@ public class Main {
 //                    faker.internet().safeEmailAddress(),
                     firstName.toLowerCase() + "." + lastName.toLowerCase() + "@cyrilsoft.com",
 
+
                     random.nextInt(16,99)
 
             );
