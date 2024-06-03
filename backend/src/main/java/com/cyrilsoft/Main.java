@@ -56,6 +56,8 @@ public class Main {
                     random.nextInt(16,99)
 
             );
+
+
 //          List<Customer> customers = List.of(alex, jamila);
 //          customerRepository.saveAll(customers);
             customerRepository.save(customer);
