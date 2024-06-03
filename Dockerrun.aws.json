@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "fullstack_africana",
-      "image": "cyrijthomas2005/fullstack_africana:26.05.2024.08.16.46",
+      "image": "cyrijthomas2005/fullstack_africana:03.06.2024.06.01.22",
       "essential": true,
       "memory": 512,
       "portMappings": [
