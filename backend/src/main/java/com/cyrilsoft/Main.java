@@ -2,6 +2,7 @@ package com.cyrilsoft;
 
 import com.cyrilsoft.customer.Customer;
 import com.cyrilsoft.customer.CustomerRepository;
+import com.cyrilsoft.customer.Gender;
 import com.github.javafaker.Faker;
 import com.github.javafaker.Name;
 
@@ -49,13 +50,14 @@ public class Main {
             String firstName = name.firstName();
 
             String lastName = name.lastName();
+            int age = random.nextInt(16,99);
+            Gender gender = age % 2 == 0 ? Gender.MALE : Gender.FEMALE;
             Customer customer = new Customer(
                     firstName + " "+ lastName,
 //                    faker.internet().safeEmailAddress(),
                     firstName.toLowerCase() + "." + lastName.toLowerCase() + "@cyrilsoft.com",
-                    random.nextInt(16,99)
-
-            );
+                    age,
+                    gender);
 
 
 //          List<Customer> customers = List.of(alex, jamila);

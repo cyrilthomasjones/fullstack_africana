@@ -45,8 +45,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id,"Alex","alex@gmail.com",19
-        );
+                (long)id,"Alex","alex@gmail.com",19,
+                Gender.MALE);
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
         // When
@@ -76,7 +76,7 @@ class CustomerServiceTest {
         String email = "alex@gmail.com";
         when(customerDAO.existsPersonWithEmail(email)).thenReturn(false);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "Alex", email, 19
+                "Alex", email, 19, Gender.MALE
         );
 
         // When
@@ -102,7 +102,7 @@ class CustomerServiceTest {
         String email = "alex@gmail.com";
         when(customerDAO.existsPersonWithEmail(email)).thenReturn(true);
         CustomerRegistrationRequest request = new CustomerRegistrationRequest(
-                "Alex", email, 19
+                "Alex", email, 19, Gender.MALE
         );
 
         // When
@@ -149,8 +149,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id, "Alex","alex@mail.com",19
-        );
+                (long)id, "Alex","alex@mail.com",19,
+                Gender.MALE);
 
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
@@ -180,8 +180,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id, "Alex","alex@mail.com",19
-        );
+                (long)id, "Alex","alex@mail.com",19,
+                Gender.MALE);
 
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
@@ -208,8 +208,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id, "Alex","alex@mail.com",19
-        );
+                (long)id, "Alex","alex@mail.com",19,
+                Gender.MALE);
 
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
@@ -239,8 +239,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id, "Alex","alex@mail.com",19
-        );
+                (long)id, "Alex","alex@mail.com",19,
+                Gender.MALE);
 
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
@@ -267,8 +267,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id, "Alex", "alex@gmail.com", 19
-        );
+                (long)id, "Alex", "alex@gmail.com", 19,
+                Gender.MALE);
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
         String newEmail = "alexandro@amigoscode.com";
@@ -292,8 +292,8 @@ class CustomerServiceTest {
         // Given
         int id = 10;
         Customer customer = new Customer(
-                (long)id, "Alex", "alex@gmail.com", 19
-        );
+                (long)id, "Alex", "alex@gmail.com", 19,
+                Gender.MALE);
         when(customerDAO.selectCustomerById(id)).thenReturn(Optional.of(customer));
 
         CustomerUpdateRequest updateRequest = new CustomerUpdateRequest(

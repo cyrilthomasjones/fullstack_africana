@@ -20,7 +20,7 @@ public class CustomerJDBCDataAccessService implements CustomerDAO {
     @Override
     public List<Customer> selectAllCustomers() {
         var sql = """
-                select id, name, email, age
+                select id, name, email, age, gender
                 from customer
                 """;
        return jdbcTemplate.query(sql, customerRowMapper);
@@ -29,7 +29,7 @@ public class CustomerJDBCDataAccessService implements CustomerDAO {
     @Override
     public Optional<Customer> selectCustomerById(Integer Id) {
         var sql = """
-                select id, name, email, age
+                select id, name, email, age, gender
                 from customer
                 where id = ?
                 """;
@@ -39,14 +39,15 @@ public class CustomerJDBCDataAccessService implements CustomerDAO {
     @Override
     public void insertCustomer(Customer customer) {
         var sql = """
-                Insert into customer(name, email, age)
-                values(?,?,?)
+                Insert into customer(name, email, age, gender)
+                values(?,?,?,?)
                 """;
         int result = jdbcTemplate.update(
                 sql,
                 customer.getName(),
                 customer.getEmail(),
-                customer.getAge()
+                customer.getAge(),
+                customer.getGender().name()
         );
         System.out.println("jdbcTemplate.update = "+result);
     }
